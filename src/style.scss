@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.App {
+  text-align: unset;
+  background: #000;
+  padding-bottom: 40px;
+
+  .navbar{
+    padding: 18px 0 10px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.2s all;
+    &.dark_header{
+      background: rgba(0,0,0,0.8);
+    }
+    .inner{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+
+      .logo_div{
+        cursor: pointer;
+        img{
+          max-width: 100px;
+          width: 100%;
+        }
+      }
+      .icon_div{
+        cursor: pointer;
+        img{
+          max-width: 30px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .featured_banner {
+    object-fit: contain;
+    height: 448px;
+    margin-bottom: 40px;
+
+    .banner_txt {
+      padding-top: 140px;
+      margin-left: 40px;
+      h1 {
+        color: #fff;
+        font-weight: 800;
+        font-size: 52px;
+      }
+      .banner_descr {
+        display: inline-block;
+        color: #fff;
+        width: 500px;
+        margin-top: 22px;
+      }
+      .btn_wrapper {
+        margin-top: 20px;
+        button {
+          width: 100px;
+          padding: 8px 20px;
+          margin-right: 22px;
+          font-weight: 700;
+          cursor: pointer;
+          display: inline-block;
+          border: none;
+          outline: none;
+          background-color: rgba(51, 51, 51, 0.5);
+          color: #fff;
+          border-radius: 4px;
+
+          &:hover {
+            color: #000;
+            background-color: #e6e6e6;
+            transition: all 0.2s;
+          }
+        }
+      }
+    }
+    .banner_gradient {
+      height: 120px;
+      background-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(37, 37, 37, 0.61),
+        #111
+      );
+    }
+  }
+
+
+  .inner {
+    margin: 0 20px;
+
+    .row_parent {
+      margin-bottom: 45px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .row_title {
+        margin-bottom: 15px;
+        color: #fff;
+      }
+      .img_wrap {
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .poster {
+          cursor: pointer;
+          :hover {
+            img {
+              transform: scale(1.05);
+              transition: 500ms all ease-out;
+            }
+          }
+        }
+        .poster_wrap_large {
+          min-width: 160px;
+          width: 100%;
+          margin-right: 10px;
+        }
+        .poster_wrap {
+          width: 100%;
+          min-width: 200px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
